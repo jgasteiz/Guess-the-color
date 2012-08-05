@@ -86,6 +86,7 @@ button:hover {
 }
 .score {
     font-size: 6em;
+    margin-top: 60px;
     position: absolute;
     right: 6%;
     top: 0;
@@ -112,11 +113,14 @@ button:hover {
     margin-bottom: 20px;
 }
 .margin-left6per {
-    margin-left: 6.5%;
+    margin-left: 6%;
 }
 .clear-both {
     clear: both;
 }
 .hidden {
     display: none;
+}
+.block {
+    display: block;
 }
