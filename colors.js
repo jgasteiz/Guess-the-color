@@ -22,7 +22,12 @@ var COLORS = (function() {
      * @method randomColor
      */
     var getRandomColor = function() {
-        return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        // Must fix this...
+        var color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        if (color.length === 6) {
+            color = color + "0";
+        }
+        return color;
     };
 
     /**
