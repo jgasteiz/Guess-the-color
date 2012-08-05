@@ -38,7 +38,7 @@ var COLORS = (function() {
     var nextColor = function() {
         colorInPosition = getRandomColor();
         $('#colors').html(
-            '<div style="background-color: ' + colorInPosition + '"></div>');
+            '<div style="message: you cheater!; background-color: ' + colorInPosition + '"></div>');
     };
 
     /**
