@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Guess the color</title>
+        <link rel="stylesheet" type="text/css" href="colors.css" />
+    </head>
+    <body>
+        
+        <div id="content">
+            <h1>Guess the color</h1>
+            
+            <div id="colors" class="colors"></div>
+            
+            <input id="color" type="text"/>
+            <button onclick="COLORS.getAnswer()">Next color</button>
+            
+            <h1 id="score" class="score"></h1>
+            <h1 id="animated-score" class="animated-score"></h1>
+            <div id="messages" class="messages"></div>
+
+            <a class="help margin-top40" href="#help">Want some help?</a>
+
+            <div id="help" class="margin-top40 hidden">
+                <div class="margin-bottom20">
+                    <div class="minicolor" style="background: FF0000;">FF0000</div>
+                    <div class="minispace margin-left6per">+</div>
+                    <div class="minicolor margin-left6per" style="background: 00FF00;">00FF00</div>
+                    <div class="minispace margin-left6per">=</div>
+                    <div class="minicolor margin-left6per" style="background: FFFF00;">FFFF00</div>
+                    <div class="clear-both"></div>
+                </div>
+
+                <div class="margin-bottom20">
+                    <div class="minicolor" style="background: 00FF00;">00FF00</div>
+                    <div class="minispace margin-left6per">+</div>
+                    <div class="minicolor margin-left6per" style="background: 0000FF; color: #FFFFFF;">0000FF</div>
+                    <div class="minispace margin-left6per">=</div>
+                    <div class="minicolor margin-left6per" style="background: 00FFFF;">00FFFF</div>
+                    <div class="clear-both"></div>
+                </div>
+
+                <div class="margin-bottom20">
+                    <div class="minicolor" style="background: 0000FF; color: #FFFFFF;">0000FF</div>
+                    <div class="minispace margin-left6per">+</div>
+                    <div class="minicolor margin-left6per" style="background: FF0000;">FF0000</div>
+                    <div class="minispace margin-left6per">=</div>
+                    <div class="minicolor margin-left6per" style="background: FF00FF;">FF00FF</div>
+                    <div class="clear-both"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="https://github.com/jgasteiz/Guess-the-color"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="colors.js"></script>
+        <script>
+            $(document).ready(function() {
+                COLORS.init();
+            });
+        </script>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-33900127-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>
