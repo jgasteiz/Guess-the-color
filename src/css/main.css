@@ -9,7 +9,7 @@
 /* Elements */
 body {
     background-color: #CCC;
-    background-image: url('noiseOverlay.png');
+    background-image: url('../imgs/noiseOverlay.png');
     font-family: Arial;
     margin: 40px auto 0;
     text-align: center;
