@@ -13,7 +13,8 @@
     
     <body>
         
-        <div id="content">
+        <!-- App -->
+        <div id="app">
             <h2 class="disclaimer">
                 so you think you are a hardcore web developer...
             </h2>
@@ -22,11 +23,11 @@
             <div id="colors" class="colors"></div>
 
             <input id="color" type="text"/>
-            <button onclick="COLORS.getAnswer()">Next color</button>
+            <button class="next">Next color</button>
 
             <a class="help block margin-top40" href="#help">Want some help?</a>
 
-            <!-- Help section -->
+            <!-- Help -->
             <div id="help" class="margin-top40 hidden">
                 <div class="margin-bottom20">
                     <div class="minicolor"
@@ -61,11 +62,24 @@
                         style="background-color: #FF00FF;">FF00FF</div>
                     <div class="clear-both"></div>
                 </div>
-            </div><!-- /help -->
-        </div><!-- /content -->
+            </div><!-- /Help -->
+
+            <!-- Templates -->
+            <script type="text/template" id="color-template">
+                <div class="color" style="background-color: <%= color %>;"></div>
+            </script>
+            <script type="text/template" id="game-over-template">
+                <h1>Congratulations, you scored <%= score %> over 300!</h1>
+                <button class="play-again">Play Again</button>
+            </script>
+            <script type="text/template" id="error-message-template">
+                You must enter a valid color code.<br>Ex: F5F5F5 or 36b036
+            </script><!-- /Templates -->
+
+        </div><!-- /App -->
 
         
-        <!-- Absolute position elements -->
+        <!-- Score, animated score and messages -->
         <h1 id="score" class="score"></h1>
         <h1 id="animated-score" class="animated-score"></h1>
         <div id="messages" class="messages"></div>
@@ -78,15 +92,19 @@
         <!-- Le javascript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
+        <!-- Libraries: json2, jquery, underscore, backbone -->
+        <script type="text/javascript" src="src/js/json2.js"></script>
         <script type="text/javascript" src="src/js/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="src/js/Colors.js"></script>
-        <script>
-            $(document).ready(function() {
-                COLORS.init();
-            });
-        </script>
+        <script type="text/javascript" src="src/js/underscore-min.js"></script>
+        <script type="text/javascript" src="src/js/backbone-min.js"></script>
 
+        <!-- Main game sources -->
+        <script type="text/javascript" src="src/js/Colors.js"></script>
+        <script type="text/javascript" src="src/js/Colors.Game.js"></script>
+        <script type="text/javascript" src="src/js/Colors.GameView.js"></script>
+        <script type="text/javascript" src="src/js/Colors.App.js"></script>
         
+
         <!-- Google Analytics -->
         <script type="text/javascript">
           var _gaq = _gaq || [];
