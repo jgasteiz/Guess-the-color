@@ -149,8 +149,8 @@ button:hover {
     width: 96%;
   }
   h1 {
-    font-size: 1.6em;
-    margin: 10px 0;
+    font-size: 1.2em;
+    margin: 20px 0 10px;
   }
   button,
   input[type="text"] {
@@ -160,8 +160,9 @@ button:hover {
   }
   .score {
     font-size: 2em;
-    top: 0;
     margin: 20px 0;
+    right: 10px;
+    top: 0;
   }
   .animated-score {
     font-size: 2em;
@@ -177,18 +178,6 @@ button:hover {
     width: 160px;
   }
   .disclaimer {
-    font-size: 1.2em;
-    padding: 0 70px;
-    margin-bottom: 0;
-  }
-}
-@media only screen and (max-width: 319px) {
-  .disclaimer {
-    padding-left: 20px;
-    font-size: 1em;
-    text-align: left;
-  }
-  h1 {
-    font-size: 1.2em;
+    display: none;
   }
 }
